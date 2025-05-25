@@ -1,0 +1,27 @@
+{
+    "Linear Regression": {
+        "copy_X": true,
+        "fit_intercept": true,
+        "positive": true
+    },
+    "C\u00e2y quy\u1ebft \u0111\u1ecbnh": {
+        "criterion": "absolute_error",
+        "max_depth": null,
+        "max_features": null,
+        "min_samples_leaf": 8,
+        "min_samples_split": 2
+    },
+    "Random Forest": {
+        "max_depth": null,
+        "min_samples_leaf": 4,
+        "min_samples_split": 2,
+        "n_estimators": 100
+    },
+    "XGBoost": {
+        "colsample_bytree": 1.0,
+        "learning_rate": 0.2,
+        "max_depth": 5,
+        "n_estimators": 50,
+        "subsample": 0.8
+    }
+}
