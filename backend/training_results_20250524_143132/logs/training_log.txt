@@ -1,0 +1,260 @@
+[2025-05-24 14:31:32] ===== BẮT ĐẦU HUẤN LUYỆN MÔ HÌNH DỰ ĐOÁN ĐIỂM SỐ SINH VIÊN =====
+[2025-05-24 14:31:32] Đang đọc tập dữ liệu...
+[2025-05-24 14:31:32] Đọc dữ liệu thành công: 835 dòng và 31 cột
+[2025-05-24 14:31:32] 
+=== PHÂN TÍCH DỮ LIỆU ===
+[2025-05-24 14:31:32] Kích thước dữ liệu: (835, 31)
+[2025-05-24 14:31:32] Các cột trong dữ liệu: school, sex, age, address, famsize, Pstatus, Medu, Fedu, Mjob, Fjob, guardian, traveltime, studytime, failures, schoolsup, paid, activities, nursery, higher, internet, romantic, famrel, freetime, goout, Dalc, Walc, health, absences, G1, G2, G3
+[2025-05-24 14:31:32] Không phát hiện giá trị null trong dữ liệu
+[2025-05-24 14:31:32] 
+Thống kê mô tả:
+[2025-05-24 14:31:32] 
+            count       mean       std  ...   max  missing    dtype
+sex         835.0  18.989222  0.883436  ...  22.0        0    int64
+Pstatus     835.0   2.699401  1.101313  ...   4.0        0    int64
+Medu        835.0   2.470659  1.066174  ...   4.0        0    int64
+guardian    835.0   1.461078  0.685132  ...   4.0        0    int64
+traveltime  835.0   2.207186  1.044086  ...   4.0        0    int64
+studytime   835.0   0.562874  0.946690  ...   3.0        0    int64
+famrel      835.0   3.820359  1.013727  ...   5.0        0    int64
+freetime    835.0   3.179641  1.147959  ...   5.0        0    int64
+goout       835.0   3.014371  1.334754  ...   5.0        0    int64
+Dalc        835.0   1.711377  1.130269  ...   5.0        0    int64
+Walc        835.0   2.366467  1.315769  ...   5.0        0    int64
+health      835.0   3.332934  1.366543  ...   5.0        0    int64
+absences    835.0   1.754491  1.562706  ...   6.0        0    int64
+G1          835.0   5.671856  1.860123  ...   9.5        0  float64
+G2          835.0   5.734012  2.102138  ...  10.0        0  float64
+G3          835.0   5.686826  2.489675  ...  10.0        0  float64
+
+[16 rows x 10 columns]
+[2025-05-24 14:31:32] 
+Phân tích biến mục tiêu G3:
+[2025-05-24 14:31:32] Giá trị trung bình: 5.69
+[2025-05-24 14:31:32] Độ lệch chuẩn: 2.49
+[2025-05-24 14:31:32] Giá trị nhỏ nhất: 0.0
+[2025-05-24 14:31:32] Giá trị lớn nhất: 10.0
+[2025-05-24 14:31:32] Phân phối tứ phân vị: [4.5, 6.0, 7.5]
+[2025-05-24 14:31:32] 
+Đang phân tích tương quan giữa các biến...
+[2025-05-24 14:31:32] 
+Tương quan với G3:
+G3            1.000000
+G2            0.939617
+G1            0.898417
+traveltime    0.597058
+Pstatus       0.594289
+famrel        0.555717
+Medu          0.502205
+sex           0.136986
+absences     -0.163925
+guardian     -0.328151
+Dalc         -0.531419
+freetime     -0.536759
+Walc         -0.538449
+health       -0.542326
+goout        -0.637655
+studytime    -0.640439
+Name: G3, dtype: float64
+[2025-05-24 14:31:33] 
+Đang phân tích các biến phân loại...
+[2025-05-24 14:31:33] 
+Điểm trung bình G3 theo school:
+school
+M    5.942506
+F    5.443692
+Name: G3, dtype: float64
+[2025-05-24 14:31:34] 
+Điểm trung bình G3 theo age:
+age
+R    6.093796
+U    5.488057
+Name: G3, dtype: float64
+[2025-05-24 14:31:34] 
+Điểm trung bình G3 theo address:
+address
+GT3    6.051838
+LE3    5.004467
+Name: G3, dtype: float64
+[2025-05-24 14:31:34] 
+Điểm trung bình G3 theo famsize:
+famsize
+A    6.082682
+T    5.578811
+Name: G3, dtype: float64
+[2025-05-24 14:31:34] 
+Điểm trung bình G3 theo Fedu:
+Fedu
+health      8.166667
+teacher     7.005385
+services    6.284615
+at_home     4.458667
+other       4.199184
+Name: G3, dtype: float64
+[2025-05-24 14:31:35] 
+Điểm trung bình G3 theo Mjob:
+Mjob
+teacher     8.242424
+health      7.186111
+services    5.673179
+other       5.364264
+at_home     2.680000
+Name: G3, dtype: float64
+[2025-05-24 14:31:35] 
+Điểm trung bình G3 theo Fjob:
+Fjob
+father    6.670683
+mother    5.636863
+other     2.798684
+Name: G3, dtype: float64
+[2025-05-24 14:31:35] 
+Điểm trung bình G3 theo failures:
+failures
+yes    7.585263
+no     5.127597
+Name: G3, dtype: float64
+[2025-05-24 14:31:35] 
+Điểm trung bình G3 theo schoolsup:
+schoolsup
+yes    6.342674
+no     4.447751
+Name: G3, dtype: float64
+[2025-05-24 14:31:35] 
+Điểm trung bình G3 theo paid:
+paid
+yes    5.923077
+no     5.572064
+Name: G3, dtype: float64
+[2025-05-24 14:31:36] 
+Điểm trung bình G3 theo activities:
+activities
+yes    6.740741
+no     4.400266
+Name: G3, dtype: float64
+[2025-05-24 14:31:36] 
+Điểm trung bình G3 theo nursery:
+nursery
+yes    6.178720
+no     3.658896
+Name: G3, dtype: float64
+[2025-05-24 14:31:36] 
+Điểm trung bình G3 theo higher:
+higher
+yes    5.745387
+no     3.522727
+Name: G3, dtype: float64
+[2025-05-24 14:31:36] 
+Điểm trung bình G3 theo internet:
+internet
+yes    6.261856
+no     3.183974
+Name: G3, dtype: float64
+[2025-05-24 14:31:36] 
+Điểm trung bình G3 theo romantic:
+romantic
+no     6.186355
+yes    4.796000
+Name: G3, dtype: float64
+[2025-05-24 14:31:36] 
+=== TIỀN XỬ LÝ DỮ LIỆU ===
+[2025-05-24 14:31:36] Đang mã hóa các biến phân loại...
+[2025-05-24 14:31:36] Sau khi mã hóa: 38 biến
+[2025-05-24 14:31:36] Đang chia tập dữ liệu thành tập huấn luyện và kiểm tra...
+[2025-05-24 14:31:36] Tập huấn luyện: 668 mẫu
+[2025-05-24 14:31:36] Tập kiểm tra: 167 mẫu
+[2025-05-24 14:31:36] Đang chuẩn hóa dữ liệu...
+[2025-05-24 14:31:36] Đã chuẩn hóa dữ liệu xong
+[2025-05-24 14:31:36] 
+=== LỰA CHỌN ĐẶC TRƯNG ===
+[2025-05-24 14:31:36] Đang xác định các đặc trưng quan trọng...
+[2025-05-24 14:31:37] 
+Top 10 đặc trưng quan trọng nhất:
+       feature  importance
+14          G2    0.897547
+12    absences    0.011512
+13          G1    0.009463
+6       famrel    0.008084
+5    studytime    0.006847
+8        goout    0.006075
+4   traveltime    0.005761
+9         Dalc    0.004749
+10        Walc    0.003909
+2         Medu    0.003551
+[2025-05-24 14:31:37] 
+Số đặc trưng được chọn: 1
+[2025-05-24 14:31:37] Các đặc trưng được chọn: G2
+[2025-05-24 14:31:37] 
+=== HUẤN LUYỆN MÔ HÌNH ===
+[2025-05-24 14:31:37] Đang đánh giá sơ bộ các mô hình...
+[2025-05-24 14:31:37] Linear Regression: RMSE CV = 0.7956 (±0.0780)
+[2025-05-24 14:31:37] Cây quyết định: RMSE CV = 0.9540 (±0.0655)
+[2025-05-24 14:31:38] Random Forest: RMSE CV = 0.7019 (±0.0804)
+[2025-05-24 14:31:40] XGBoost: RMSE CV = 0.7310 (±0.0509)
+[2025-05-24 14:31:41] 
+Đang tối ưu hóa siêu tham số cho mô hình Cây quyết định...
+[2025-05-24 14:31:47] Siêu tham số tốt nhất cho Cây quyết định: {'criterion': 'absolute_error', 'max_depth': None, 'max_features': None, 'min_samples_leaf': 8, 'min_samples_split': 2}
+[2025-05-24 14:31:47] RMSE tốt nhất từ CV: 0.8232
+[2025-05-24 14:31:47] 
+Đang tối ưu hóa siêu tham số cho mô hình Random Forest...
+[2025-05-24 14:31:58] Siêu tham số tốt nhất cho Random Forest: {'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'n_estimators': 100}
+[2025-05-24 14:31:58] RMSE tốt nhất từ CV: 0.7146
+[2025-05-24 14:31:58] 
+Đang tối ưu hóa siêu tham số cho mô hình XGBoost...
+[2025-05-24 14:32:23] Siêu tham số tốt nhất cho XGBoost: {'colsample_bytree': 1.0, 'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 50, 'subsample': 0.8}
+[2025-05-24 14:32:23] RMSE tốt nhất từ CV: 0.6757
+[2025-05-24 14:32:23] 
+Đang tối ưu hóa siêu tham số cho mô hình Linear Regression...
+[2025-05-24 14:32:23] Siêu tham số tốt nhất cho Linear Regression: {'copy_X': True, 'fit_intercept': True, 'positive': True}
+[2025-05-24 14:32:23] RMSE tốt nhất từ CV: 0.8024
+[2025-05-24 14:32:23] 
+=== ĐÁNH GIÁ MÔ HÌNH CUỐI CÙNG ===
+[2025-05-24 14:32:23] 
+Kết quả đánh giá Linear Regression (tối ưu):
+[2025-05-24 14:32:23] MSE: 0.8786
+[2025-05-24 14:32:23] RMSE: 0.9373
+[2025-05-24 14:32:23] MAE: 0.6317
+[2025-05-24 14:32:23] R²: 0.8539
+[2025-05-24 14:32:24] 
+Kết quả đánh giá Cây quyết định (tối ưu):
+[2025-05-24 14:32:24] MSE: 0.6764
+[2025-05-24 14:32:24] RMSE: 0.8224
+[2025-05-24 14:32:24] MAE: 0.3737
+[2025-05-24 14:32:24] R²: 0.8875
+[2025-05-24 14:32:25] 
+Kết quả đánh giá Random Forest (tối ưu):
+[2025-05-24 14:32:25] MSE: 0.6143
+[2025-05-24 14:32:25] RMSE: 0.7838
+[2025-05-24 14:32:25] MAE: 0.3967
+[2025-05-24 14:32:25] R²: 0.8978
+[2025-05-24 14:32:25] 
+Kết quả đánh giá XGBoost (tối ưu):
+[2025-05-24 14:32:25] MSE: 0.6553
+[2025-05-24 14:32:25] RMSE: 0.8095
+[2025-05-24 14:32:25] MAE: 0.4048
+[2025-05-24 14:32:25] R²: 0.8910
+[2025-05-24 14:32:25] 
+Mô hình tốt nhất là: Random Forest (tối ưu)
+[2025-05-24 14:32:25] RMSE: 0.7838
+[2025-05-24 14:32:25] R²: 0.8978
+[2025-05-24 14:32:25] 
+Đang lưu các mô hình...
+[2025-05-24 14:32:25] Đã lưu Linear Regression (tối ưu) tại training_results_20250524_143132\models\Linear_Regression_tối_ưu.pkl
+[2025-05-24 14:32:25] Đã lưu Cây quyết định (tối ưu) tại training_results_20250524_143132\models\Cây_quyết_định_tối_ưu.pkl
+[2025-05-24 14:32:25] Đã lưu Random Forest (tối ưu) tại training_results_20250524_143132\models\Random_Forest_tối_ưu.pkl
+[2025-05-24 14:32:25] Đã lưu XGBoost (tối ưu) tại training_results_20250524_143132\models\XGBoost_tối_ưu.pkl
+[2025-05-24 14:32:26] Đã lưu mô hình tốt nhất tại models/decision_tree_model.pkl
+[2025-05-24 14:32:26] 
+=== THÔNG TIN THÊM VỀ DỮ LIỆU VÀ MÔ HÌNH ===
+[2025-05-24 14:32:26] Đặc trưng quan trọng nhất là: G2
+[2025-05-24 14:32:26] 
+=== TÓM TẮT QUÁ TRÌNH ===
+[2025-05-24 14:32:26] Số lượng mẫu: 835
+[2025-05-24 14:32:26] Số lượng đặc trưng ban đầu: 31
+[2025-05-24 14:32:26] Số lượng đặc trưng sau khi mã hóa: 37
+[2025-05-24 14:32:26] Số lượng đặc trưng được chọn: 1
+[2025-05-24 14:32:26] Mô hình tốt nhất: Random Forest (tối ưu)
+[2025-05-24 14:32:26] RMSE của mô hình tốt nhất: 0.7838
+[2025-05-24 14:32:26] R² của mô hình tốt nhất: 0.8978
+[2025-05-24 14:32:26] Đã lưu mô hình tại: models/decision_tree_model.pkl
+[2025-05-24 14:32:26] 
+===== HOÀN THÀNH QUÁ TRÌNH HUẤN LUYỆN =====
