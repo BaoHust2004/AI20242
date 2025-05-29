@@ -1,0 +1,10 @@
+# train_linear_regression.py
+import joblib
+from sklearn.linear_model import LinearRegression
+
+from utils import load_processed_data, evaluate_and_save
+
+X_train, X_test, y_train, y_test = load_processed_data()
+
+model = LinearRegression()
+evaluate_and_save(model, "LinearRegression", X_train, y_train, X_test, y_test)

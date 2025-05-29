@@ -1,0 +1,10 @@
+# train_decision_tree.py
+import joblib
+from sklearn.tree import DecisionTreeRegressor
+
+from utils import load_processed_data, evaluate_and_save
+
+X_train, X_test, y_train, y_test = load_processed_data()
+
+model = DecisionTreeRegressor(random_state=42)
+evaluate_and_save(model, "DecisionTree", X_train, y_train, X_test, y_test)
